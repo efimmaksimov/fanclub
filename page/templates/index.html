@@ -1,0 +1,60 @@
+<!DOCTYPE>
+{% load static %}
+<html lang='ru'>
+	<head>
+		<meta charset=''UTF-8>
+		<title>Фанклуб</title>
+		<link rel="stylesheet" href="{% static 'css/style2.css' %}">
+	</head>
+	<body>
+	<div class='container'>
+		<header>
+			<h1>Фан-клуб</h1>
+			<p class="name">Кати Сычёвой</p>
+		</header>
+		
+		<div class="text">
+		<section>
+			<h2>Почему Катя?</h2>
+			<ul>
+			<li>Самая милая девушка</li>
+			<li>Классно танцует</li>
+			<li>Потрясающий дизайнер</li>
+			<li>Вкусно готовит</li>
+			<li>Интересный собеседник</li>
+			</ul>
+		</section>
+		
+		<h2>И ТЫ ДО СИХ ПОР НЕ С НАМИ?!</h2>
+		<hr>
+		<p align='center'>Присоединяйтесь к нам</p>
+		<p align='center'>Нас уже {{ counter }}!</p>
+		<form action='{% url "leave_comment" %}' method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			<p><label for="id_author_name"></label> <input type="text" class='textbox' name="author_name" maxlength="50" placeholder="Ваше имя" required id="id_author_name"></p>
+			<p><label for="id_comment_text"></label> <textarea type="text" class='message' name="comment_text" placeholder="Текст комментария" maxlength="200" required id="id_comment_text"></textarea></p>
+			<p ><label for="id_photo" class='file'>Фото</label> <input type="file" name="photo" accept="image/*" required id="id_photo"></p>
+			<button type="submit" class='button'>Отправить</button>
+		</form>
+		<br>
+		<hr>
+		{% for c in latest_comment_list %}
+			<p>
+				
+				<div class='photo'><img src='{{c.photo.url}}' height='100' width='100'></div>
+				<div class='author'><strong>{{c.author_name}}</strong></div>
+				<br>
+				<div class='comment'><p>{{c.comment_text}}</p></div>
+			</p>
+			<br clear='both'>
+		{% endfor %}
+		<hr>
+
+		<footer>
+			<p>© Zhopa-popa, 2020</p>
+			<p>Все права защищены</p>
+		</footer>
+	</div>	
+	</div>	
+	</body>
+</html>
