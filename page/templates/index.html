@@ -28,7 +28,7 @@
 		<h2>И ТЫ ДО СИХ ПОР НЕ С НАМИ?!</h2>
 		<hr>
 		<p align='center'>Присоединяйтесь к нам</p>
-		<p align='center'>Нас уже {{ counter }}!</p>
+		<!--<p align='center'>Нас уже {{ counter }}!</p>-->
 		<form action='{% url "leave_comment" %}' method="post" enctype="multipart/form-data">
 			{% csrf_token %}
 			<p><label for="id_author_name"></label> <input type="text" class='textbox' name="author_name" maxlength="50" placeholder="Ваше имя" required id="id_author_name"></p>
