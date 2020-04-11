@@ -16,7 +16,7 @@ class AddComment(CreateView):
 def index(request):
     #counter = len(Comment.objects.all())
     latest_comment_list = Comment.objects.order_by('-id')[:10]
-    return render(request, 'index.html', {'latest_comment_list': latest_comment_list, 'counter': counter})
+    return render(request, 'index.html', {'latest_comment_list': latest_comment_list})
     
 def leave_comment(request):
     c = Comment(comment_text = request.POST['comment_text'], author_name = request.POST['author_name'], photo = request.FILES['photo'])
