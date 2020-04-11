@@ -1,0 +1,121 @@
+body {
+	font-family: "Arial";
+	background: #ffffff url("../img/back3.jpg") no-repeat ;
+}
+
+h1 {
+	font-size: 42px;
+	color: #ffe958;
+	font-family: "Georgia", serif;
+	margin-bottom: 5px
+}
+
+ul {
+	list-style-image: url("../img/heart1.jpeg");
+}
+
+form {
+  margin:0 auto;
+  max-width:50%;
+  box-sizing:border-box;
+  padding:40px;
+  border-radius:5px; 
+  background:RGBA(255,255,255,1);
+  -webkit-box-shadow:  0px 0px 15px 0px rgba(0, 0, 0, .45);        
+  box-shadow:  0px 0px 15px 0px rgba(0, 0, 0, .45); 
+}
+
+.textbox{
+  height:50px;
+  width:100%;
+  border-radius:7px;
+  border:rgba(0,0,0,.3) 2px solid;
+  box-sizing:border-box;
+  font-family: 'Open Sans', sans-serif;
+  font-size:18px; 
+  padding:10px;
+  margin-bottom:10px; 
+}
+
+.message {
+  height:120px;
+  width:100%;
+  border-radius:7px;
+  border:rgba(0,0,0,.3) 2px solid;
+  box-sizing:border-box;
+  font-family: 'Open Sans', sans-serif;
+  font-size:18px; 
+  padding:10px;
+  margin-bottom:10px; 
+}
+
+.button{
+  height:50px;
+  width:45%;
+  border-radius:7px;
+  border:rgba(0,0,0,.3) 0px solid;
+  box-sizing:border-box;
+  padding:10px;
+  background:#ffe958;
+  color:#ffffff;
+  font-family: 'Open Sans', sans-serif;  
+  font-weight:400;
+  font-size: 16pt;
+  transition:background .4s;
+  cursor:pointer;
+}
+
+.container {
+  width: 780px;
+  margin: 0 auto;
+}
+
+.text {
+	position: relative;
+	top: 350px;
+}
+
+.name {
+	line-height: 2px;
+}
+
+.photo {
+	float: left;
+	padding-right: 10px;	
+}
+
+.author {
+	float: left;
+	min-height: 10px;
+
+}
+
+.comment {
+	float: left;
+}
+
+.file {
+	float: left;
+	height:50px;
+    width:45%;
+	border-radius:7px;
+	border:rgba(0,0,0,.3) 0px solid;
+	cursor:pointer;
+	background:#ffe958;
+	margin-right: 30px;
+	font-family: 'Open Sans', sans-serif;  
+	font-weight:400;
+	font-size: 16pt;
+	color: #ffffff;
+	text-align: center;
+	line-height: 50px
+	
+}
+
+ input[type=file] {
+     width: 0.1px;
+     height: 0.1px;
+     opacity: 0;
+     position: absolute;
+     z-index: -10;
+}
